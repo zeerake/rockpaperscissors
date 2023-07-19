@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div>
+        <h1>HELLO - Rock Paper Scissors</h1>
+    </div>
+    <script>
+        function randomNumber() {
+            var selection = Math.floor((Math.random() * 3) + 1);
+            if (selection === 1) {
+                selection = "ROCK";
+            }
+            if (selection === 2) {
+                selection = "PAPER";
+            }
+            if (selection === 3) {
+                selection = "SCISSORS";
+            }
+            else {
+                return 0;
+            }
+        }
+        // console.log(randomNumber());
+        function getComputerChoice() {
+            return randomNumber();
+        }
+        function getPlayerChoice() {
+            var choice = prompt("Select Rock, Paper or Scissors: ");
+            return choice.toUpperCase;
+        }
+
+        function play() {
+            let playerScore = 0;
+            let computerScore = 0;
+            while (playerScore != 2 || computerScore != 2) {
+                var computerChoice = getComputerChoice();
+                var playerChoice = getPlayerChoice();
+                if (playerChoice === computerChoice) {
+                    return "you scored a point!";
+                    playerScore++;
+                } else {
+                    return "you lost this time!";
+                    computerScore++;
+                }
+
+            }
+
+            console.log(playerScore);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
